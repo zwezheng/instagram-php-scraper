@@ -52,7 +52,7 @@ class Instagram
     public $pagingDelayMaximumMicrosec = self::PAGING_DELAY_MAXIMUM_MICROSEC;
     private $sessionUsername;
     private $sessionPassword;
-    private $userSession;
+    public $userSession;
     private $rhxGis = null;
     private $userAgent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36';
     private $customCookies = null;
