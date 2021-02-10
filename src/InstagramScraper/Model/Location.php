@@ -15,8 +15,13 @@ class Location extends AbstractModel
         'slug' => 'slug',
         'lat' => 'lat',
         'lng' => 'lng',
-        'modified' => 'modified'
+        'modified' => 'modified',
+        'address_json' => 'locationAddressJson'
     ];
+    /**
+     * @var
+     */
+    protected $locationAddressJson;
     /**
      * @var
      */
@@ -47,9 +52,24 @@ class Location extends AbstractModel
     protected $isLoaded = false;
 
     /**
-     * @var 
+     * @var
      */
     protected $modified;
+
+    /**
+     * @return string
+     */
+    public function getLocationAddressJson()
+    {
+        return $this->locationAddressJson;
+    }
+    /**
+     * @return mixed
+     */
+    public function getLocationAddress()
+    {
+        return json_decode($this->locationAddressJson);
+    }
 
     /**
      * @return mixed
